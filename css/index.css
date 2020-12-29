@@ -251,7 +251,12 @@ h1{
 .h2linetop { width:100%; text-align:center; border-top: 1px solid #fff; line-height:0.1em; margin:10px 0 20px; }
 .h2linetop span { background:#000; padding:0 10px; }
 
-
+.title-text{
+	font-family: 'Poiret One';
+    font-size: 100px;
+    margin-bottom:50px;
+    margin-top:50px;
+}
 
 
 /*scrollbar*/
