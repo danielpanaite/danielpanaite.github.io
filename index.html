@@ -15,6 +15,8 @@
 <link href="resources/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="resources/libs/jquery/dist/js/jquery.min.js"></script>
 <script src="resources/libs/parallax/dist/js/parallax.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./js/custom.js"></script>
 <link rel="stylesheet" type="text/css" media="screen" href="resources/libs/fancybox/dist/css/jquery.fancybox-1.3.4.css" />
 <style type="text/css">
     a.fancybox img {
@@ -67,9 +69,13 @@
     <div class="navwrap">
     <div id="navbar">
         <a class="active" href="#home">Home</a>
-        <a href="#about">Chi sono</a>
-        <a href="#projects">Progetti</a>
-        <a href="#contact">Contatto</a>
+        <a href="#about"><span lang="it">Chi sono</span><span lang="en">About me</span></a>
+        <a href="#projects"><span lang="it">Progetti</span><span lang="en">Projects</span></a>
+        <a href="#contact"><span lang="it">Contatto</span><span lang="en">Contact</span></a>
+        <a href="" id="switch-lang" onclick="event.preventDefault();">
+            <span lang="it"><img src="./resources/gb.svg" width="30" height="20"></span>
+            <span lang="en"><img src="./resources/it.svg" width="30" height="20"></span>
+        </a>
     </div>
     </div>
 
@@ -91,9 +97,12 @@
     	<div class="row text-center">
 	    	<div class="col-12">
 	    		<br>
-	    		<h1 class="title-text">Chi sono?</h1>
+	    		<h1 class="title-text"><span lang="it">Chi sono?</span><span lang="en">About me</span></h1>
 	            <hr class="linea">
-	            <p class="about-text">Sono uno studente presso il Politecnico di Torino, appassionato di design e programmazione. Con tutte le conoscenze acquisite lungo gli anni da tutti i miei progetti il mio scopo &egrave; quello di impegnarmi al massimo delle capacit&aacute; per produrre contenuti creativi ed unici.</p>
+	            <p class="about-text">
+                    <span lang="it">Sono uno studente presso il Politecnico di Torino, appassionato di programmazione e design. Con tutte le conoscenze acquisite lungo gli anni da tutti i miei progetti il mio scopo &egrave; quello di impegnarmi al massimo delle capacit&aacute; per produrre contenuti creativi ed unici.</span>
+                    <span lang="en">I am a student at Politecnico di Torino who loves programming and design. With all the knowledge acquired through the years from all my projects my goal is to do my best and create unique and creative content.</span>
+                </p>
 	            <hr class="linea">
 	    	</div>
     	</div>
@@ -106,7 +115,7 @@
     <div class="container" id="projects">
     	<div class="row text-center">
     		<div class="col-12">
-    			<h1 class="title-text">I progetti</h1>
+    			<h1 class="title-text"><span lang="it">I progetti</span><span lang="en">My projects</span></h1>
     		</div>
     	</div>
     </div>
@@ -120,14 +129,17 @@
         	</div>
             <div class="col-12 col-xl-6 text-left">
             	<br><br>
-            	<h5>Forum dedicato al confronto di idee tra gruppi di pensiero diversi</h5>
-            	<h6 class="text-secondary">Progetto completato</h6>
+            	<h5>
+                    <span lang="it">Forum dedicato al confronto di idee tra gruppi di pensiero diversi</span>
+                    <span lang="en">Forum dedicated to sharing your ideas with groups of different schools of thought</span>
+                </h5>
+            	<h6 class="text-secondary"><span lang="it" class="text-secondary">Progetto completato</span><span lang="en" class="text-secondary">Project completed</span></h6>
             	<br>
-            	<h6>Database progettato da zero con MySQL</h6>
-            	<h6>Backend realizzato in PHP</h6>
-            	<h6>Costruito con HTML, CSS e Bootstrap 4</h6>
-            	<a role="button" href="https://shareyourideas.altervista.org/" target="_blank" class="btn btn-primary" style="margin-top:10px; color:white"><img src="resources/font/feathericons/eye.svg" width="15px" style="filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(103%) contrast(102%); margin-bottom:3px">&emsp;Vedi sito</a>
-            	<a role="button" href="https://github.com/danielpanaite/shareyourideas" target="_blank" class="btn btn-light" style="margin-top:10px; color:black"><img src="resources/font/feathericons/code.svg" width="15px" style="filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(103%) contrast(102%); margin-bottom:3px">&emsp;Vedi sorgente</a>
+            	<h6><span lang="it">Database progettato con MySQL</span><span lang="en">Database made with MySQL</span></h6>
+            	<h6><span lang="it">Backend realizzato in PHP</span><span lang="en">Backend in PHP</span></h6>
+            	<h6><span lang="it">Costruito con HTML, CSS e Bootstrap 4</span><span lang="en">Built with HTML, CSS and Bootstrap 4</span></h6>
+            	<a role="button" href="https://shareyourideas.altervista.org/" target="_blank" class="btn btn-primary" style="margin-top:10px; color:white"><img src="resources/font/feathericons/eye.svg" width="15px" style="filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(103%) contrast(102%); margin-bottom:3px">&emsp;<span lang="it">Vedi sito</span><span lang="en">View website</span></a>
+            	<a role="button" href="https://github.com/danielpanaite/shareyourideas" target="_blank" class="btn btn-light" style="margin-top:10px; color:black"><img src="resources/font/feathericons/code.svg" width="15px" style="filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(103%) contrast(102%); margin-bottom:3px">&emsp;<span lang="it">Vedi sorgente</span><span lang="en">Source code</span></a>
             </div>
         </div>
 
@@ -136,13 +148,16 @@
         <div class="row">
             <div class="col-12 col-xl-6 text-left">
             	<br><br>
-            	<h5>Applicazione ideata per la prenotazione di campi sportivi</h5>
-            	<h6 class="text-secondary">Progetto completato</h6>
+            	<h5>
+                    <span lang="it">Applicazione ideata per la prenotazione di campi sportivi</span>
+                    <span lang="en">Application made for booking sports fields</span>
+                </h5>
+            	<h6 class="text-secondary"><span lang="it" class="text-secondary">Progetto completato</span><span lang="en" class="text-secondary">Project completed</span></h6>
             	<br>
-            	<h6>Database Firestore</h6>
-            	<h6>Codice scritto in Kotlin</h6>
-                <a role="button" href="https://github.com/danielpanaite/MAD2023Project/releases/tag/final" target="_blank" class="btn btn-success" style="margin-top:10px; color:white"><img src="resources/font/feathericons/activity.svg" width="15px" style="filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(103%) contrast(102%); margin-bottom:3px">&emsp;Scarica app</a>
-            	<a role="button" href="https://github.com/danielpanaite/MAD2023Project" target="_blank" class="btn btn-light" style="margin-top:10px; color:black"><img src="resources/font/feathericons/code.svg" width="15px" style="filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(103%) contrast(102%); margin-bottom:3px">&emsp;Vedi sorgente</a>
+            	<h6><span lang="it">Database Firestore</span><span lang="en">Firestore Database</span></h6>
+            	<h6><span lang="it">Codice scritto in Kotlin</span><span lang="en">Code written in Kotlin</span></h6>
+                <a role="button" href="https://github.com/danielpanaite/MAD2023Project/releases/tag/final" target="_blank" class="btn btn-success" style="margin-top:10px; color:white"><img src="resources/font/feathericons/activity.svg" width="15px" style="filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(103%) contrast(102%); margin-bottom:3px">&emsp;<span lang="it">Scarica App</span><span lang="en">Download App</span></a>
+            	<a role="button" href="https://github.com/danielpanaite/MAD2023Project" target="_blank" class="btn btn-light" style="margin-top:10px; color:black"><img src="resources/font/feathericons/code.svg" width="15px" style="filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(103%) contrast(102%); margin-bottom:3px">&emsp;<span lang="it">Vedi sorgente</span><span lang="en">Source code</span></a>
             </div>
         	<div class="col-12 col-xl-6">
         		<h2 class="h2progetti">Sportify</h2>
@@ -198,12 +213,15 @@
         <h2 class="h2line"></h2>
     </div>
     <div class="container" id="contact">
-        <h1 style="margin-bottom:30px; margin-top:50px">Contatto</h1>
-        <p>Hai delle idee per un nuovo progetto? Non esitare a lasciare una mail a:</p>
-        <p><a href="mailto:dani.panaite@yahoo.com">dani.panaite@yahoo.com</a></p>
-        <p>O vai su:</p>
+        <h1 style="margin-bottom:30px; margin-top:50px"><span lang="it">Contatto</span><span lang="en">Contact</span></h1>
+        <p>
+            <span lang="it">Hai delle idee per un nuovo progetto? Non esitare a lasciare una mail a:</span>
+            <span lang="en">Have an idea for a new project? Please leave an email at:</span>
+        </p>
+        <p><a href="mailto:dani.panaite@gmail.com">dani.panaite@gmail.com</a></p>
+        <p><span lang="it">O vai su:</span><span lang="en">Or visit me at:</span></p>
         <a href="https://github.com/danielpanaite" target="_blank"><img src="resources/font/feathericons/github.svg" style="filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(103%) contrast(102%);"></a>
-        <a href="https://www.linkedin.com/in/daniel-calin-panaite-5b1b13195/" target="_blank"><img src="resources/font/feathericons/linkedin.svg" style="filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(103%) contrast(102%);"></a>
+        <a href="https://www.linkedin.com/in/panaitedaniel/" target="_blank"><img src="resources/font/feathericons/linkedin.svg" style="filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(103%) contrast(102%);"></a>
         <hr class="divisore">
     </div>
     </div>
@@ -211,6 +229,8 @@
 
 <script src="resources/libs/popper/dist/js/popper.min.js"></script>
 <script src="resources/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
 
 </body>
 </html>
