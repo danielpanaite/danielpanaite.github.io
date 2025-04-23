@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Cascadiacode";
+    src: url("../fonts/CascadiaCode.ttf");
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Cascadiacode;
+}
+body{
+    background-color: rgb(37, 37, 37);
+    width: 100vw;
+    height: 100vh;
+}
+.bento-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.bento-container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(8, minmax(0, 1fr));
+    grid-auto-flow: dense;
+    width: 100%;
+    flex-grow: 1;
+    grid-gap: 10px;
+    padding-left: 50px;
+    padding-right:50px;
+    padding-bottom: 20px;
+}
+.bento-section{
+    background-color:grey;
+    border: 3px solid whitesmoke;
+}
+.bento-header{
+    color: white;
+    height: 100px;
+    width: 100%;
+    padding:20px;
+}
+.bento-title{
+    padding: 10px;
+}
+.bento-description{
+    padding: 10px;
+}
+.bento-section-primary {
+grid-column: span 6;
+grid-row: span 4;
+}
+.bento-section-secondary {
+grid-column: span 3;
+grid-row: span 4;
+}
+.bento-section-tertiary {
+grid-column: span 3;
+grid-row: span 2;
+}
+
+:root {
+    --repeat: 2s;   /* animation timing */
+    --height: 8px; /* total pixel height from scanline top to bottom of animation */
+    --area: 60%;    /* percentage of height the scanline covers */
+}
+.outer {
+    animation: scan var(--repeat) linear infinite;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
+    background: linear-gradient( to bottom, #000, #000 var(--area), #ccc var(--area), #ccc );
+    background-color: black;
+    background-size: 100% var(--height);
+    background-position-y: 0px;
+    opacity: 0.03;
+}
+@keyframes scan {
+    0% { background-position-y: 0px; }
+    100% { background-position-y: var(--height); }
+}
