@@ -48,6 +48,7 @@ body{
 .bento-section{
     background-color:var(--background);
     border: 3px solid var(--border);
+    color: whitesmoke;
 }
 .bento-section-intro{
     grid-column: span 9;
@@ -83,8 +84,10 @@ body{
     padding-right: 10px;
     padding-bottom: 5px;
 }
+.bento-body span{
+    display: inline-block;
+}
 .bento-title{
-    color: whitesmoke;
     padding-bottom: 10px;
 }
 .bento-title span{
@@ -117,12 +120,11 @@ body{
     grid-column: span 2;
     grid-row: span 8;
     display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.skills-skill{
-    padding-left:5px;
-    padding-right: 5px;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 .skills-skill img{
     float:left;
@@ -146,7 +148,7 @@ body{
   
 @keyframes wobb {
     0%, 100%   {transform: translateY(0px)}
-    25%  {transform: translateY(-2px)}
+    25%  {transform: translateY(-3px)}
     75%  {transform: translateY(2px)}
 }
 
@@ -154,7 +156,7 @@ body{
     animation-name: wobb;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-duration: 2000ms;
+    animation-duration: 1750ms;
     display: inline-block;
     transform: translateY(0px);
 }
