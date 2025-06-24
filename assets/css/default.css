@@ -21,7 +21,24 @@ body{
     width: 100vw;
     height: 100vh;
 }
-
+h1{
+    font-size: 40px;
+}
+h2 {
+    font-size: 35px;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 25px;
+}
+h5 {
+    font-size: 22px;
+}
+p{
+    font-size: 20px;
+}
 /* outer wrappers */
 .bento-wrapper{
     display: flex;
@@ -75,8 +92,12 @@ body{
     float: left;
 }
 .bento-image img{
-    height: clamp(1rem, 15dvw, 10rem);
+    height: clamp(2rem, 20dvw, 15rem);
 }
+.bento-image .photo{
+    height: clamp(4rem, 20dvw, 30rem)!important;
+}
+
 .bento-body{
     padding-top: 20px;
     padding-left: 10px;
@@ -85,6 +106,9 @@ body{
 }
 .bento-body span{
     display: inline-block;
+}
+.bento-body li{
+    font-size: 20px;
 }
 .bento-title{
     padding-bottom: 10px;
@@ -181,4 +205,29 @@ body{
     padding-left: 5%;
     padding-right: 5%;
     padding-top:20px;
+}
+
+.neon-btn {
+  color: var(--primary);
+  background: transparent;
+  border: 1px solid var(--primary);
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+}
+
+.neon-btn:hover {
+  background-color: var(--primary);
+  color: #000;
+  box-shadow: none;
+}
+
+.button-link {
+  text-decoration: none;
 }

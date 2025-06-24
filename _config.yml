@@ -20,7 +20,7 @@
 
 email: dani.panaite@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hello, welcome to my portfolio. I am a software engineer currently based in Tokyo, Japan working full-time.
+  Hello, welcome to my portfolio. I am Daniel Panaite. I am a software engineer currently based in Tokyo, Japan working full-time.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://danielpanaite.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: danielpanaite
